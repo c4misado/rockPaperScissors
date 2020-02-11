@@ -30,57 +30,54 @@ function playRound(computerSelection,playerSelection) {
 			case "rock":
 				alert("It's a draw!");
 				break;
-
 			case "paper":
 				alert("You win!");
 				++playerScore;
 				break;
-
 			case "scissors":
 				alert("You lose!");
 				++computerScore;
 				break;
-
 			default: alert("invalid player selection"); break;
-
-}	else if(computerSelection = "paper") {
-			case "paper":
-				alert("It's a draw!");
-				break;
-
-			case "scissors":
-				alert("You win!");
-				++playerScore;
-				break;
-
-			case "rock":
-				alert("You lose!");
-				++computerScore;
-				break;
-
-			default: alert("invalid player selection"); break;
-}	else {
-			case "scissors":
-				alert("It's a draw!");
-				break;
-
-			case "rock":
-				alert("You win!");
-				++playerScore;
-				break;
-
-			case "paper":
-				alert("You lose!");
-				++computerScore;
-				break;
-
-			default: alert("invalid player selection"); break;
-}
-			
-
 		}
-	}
-}
+}	else if (computerSelection = "paper") {
+		switch(playerSelection) {
+			case "paper":
+				alert("It's a draw!");
+				break;
+			case "scissors":
+				alert("You win!");
+				++playerScore;
+				break;
+			case "rock":
+				alert("You lose!");
+				++computerScore;
+				break;
+			default: alert("invalid player selection"); break;
+		}
+}	else {
+		switch(playerSelection) {
+			case "scissors":
+				alert("It's a draw!");
+				break;
+			case "rock":
+				alert("You win!");
+				++playerScore;
+				break;
+			case "paper":
+				alert("You lose!");
+				++computerScore;
+				break;
+			default: alert("invalid player selection"); break;
+		}
+}	
+	
+
+}		
+
+		
+	
+
 
 playRound();
 console.log(computerScore);

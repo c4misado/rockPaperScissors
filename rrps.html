@@ -7,17 +7,19 @@
 <body>
   <script>
 	let computerOptions = ["rock","paper","scissors"];
-	let computerMove = "";
+	let computerSelection = "";
 function computerPlay() {
     computerMove = computerOptions[Math.floor(Math.random() * computerOptions.length)]
-	return computerMove;
+	return computerSelection;
 }
 
-	let playerMove = "";
+	let playerSelection = "";
 function playerPlay() {
-	playerMove = prompt("Choose rock, paper, or scissors:").toLowerCase();
-	return playerMove;
+	playerSelection = prompt("Choose rock, paper, or scissors:").toLowerCase();
+	return playerSelection;
 }
+
+
 
 
 

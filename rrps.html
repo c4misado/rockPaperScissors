@@ -9,7 +9,7 @@
 	let computerOptions = ["rock","paper","scissors"];
 	let computerSelection = "";
 function computerPlay() {
-    computerMove = computerOptions[Math.floor(Math.random() * computerOptions.length)]
+    computerSelection = computerOptions[Math.floor(Math.random() * computerOptions.length)]
 	return computerSelection;
 }
 
@@ -19,7 +19,72 @@ function playerPlay() {
 	return playerSelection;
 }
 
+let playerScore = 0;
+let computerScore = 0;
 
+function playRound(computerSelection,playerSelection) {
+	computerPlay();
+	playerPlay();
+	if(computerSelection = "rock") {
+		switch(playerSelection) {
+			case "rock":
+				alert("It's a draw!");
+				break;
+
+			case "paper":
+				alert("You win!");
+				++playerScore;
+				break;
+
+			case "scissors":
+				alert("You lose!");
+				++computerScore;
+				break;
+
+			default: alert("invalid player selection"); break;
+
+}	else if(computerSelection = "paper") {
+			case "paper":
+				alert("It's a draw!");
+				break;
+
+			case "scissors":
+				alert("You win!");
+				++playerScore;
+				break;
+
+			case "rock":
+				alert("You lose!");
+				++computerScore;
+				break;
+
+			default: alert("invalid player selection"); break;
+}	else {
+			case "scissors":
+				alert("It's a draw!");
+				break;
+
+			case "rock":
+				alert("You win!");
+				++playerScore;
+				break;
+
+			case "paper":
+				alert("You lose!");
+				++computerScore;
+				break;
+
+			default: alert("invalid player selection"); break;
+}
+			
+
+		}
+	}
+}
+
+playRound();
+console.log(computerScore);
+console.log(playerScore);
 
 
 

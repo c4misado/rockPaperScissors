@@ -70,12 +70,20 @@ function playRound() {
 			default: alert("invalid player selection"); break;
 		}
 }	
-	
+}	
+do {
+	playRound();
+}
+while ((playerScore < 3) && (computerScore < 3));
 
-}		
+if (playerScore > computerScore) {
+	console.log("You win!");
+} else {
+	console.log("You lose.");
+}
 
-console.log(computerScore);
-console.log(playerScore);
+
+console.log("Final scores: \n Player: " + playerScore + "\n Computer: "+computerScore);
 
 
 

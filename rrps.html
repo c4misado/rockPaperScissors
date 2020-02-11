@@ -7,25 +7,24 @@
 <body>
   <script>
 	let computerOptions = ["rock","paper","scissors"];
-	let computerSelection = "";
+	let computerSelection = String;
 function computerPlay() {
     computerSelection = computerOptions[Math.floor(Math.random() * computerOptions.length)]
 	return computerSelection;
 }
 
-	let playerSelection = "";
+	let playerSelection = String;
 function playerPlay() {
 	playerSelection = prompt("Choose rock, paper, or scissors:").toLowerCase();
 	return playerSelection;
 }
 
-let playerScore = 0;
-let computerScore = 0;
-
-function playRound(computerSelection,playerSelection) {
-	computerPlay();
+	let playerScore = 0;
+	let computerScore = 0;
+function playRound() {
 	playerPlay();
-	if(computerSelection = "rock") {
+	computerPlay();
+	if(computerSelection == "rock") {
 		switch(playerSelection) {
 			case "rock":
 				alert("It's a draw!");
@@ -40,7 +39,7 @@ function playRound(computerSelection,playerSelection) {
 				break;
 			default: alert("invalid player selection"); break;
 		}
-}	else if (computerSelection = "paper") {
+}	else if (computerSelection == "paper") {
 		switch(playerSelection) {
 			case "paper":
 				alert("It's a draw!");
@@ -75,11 +74,6 @@ function playRound(computerSelection,playerSelection) {
 
 }		
 
-		
-	
-
-
-playRound();
 console.log(computerScore);
 console.log(playerScore);
 
